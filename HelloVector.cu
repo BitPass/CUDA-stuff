@@ -1,7 +1,9 @@
 /* 
-Simples Possible Cuda-like Cuda Program 
-Vector Add 
-For clarity, no error checking is added
+Simplest possible Cuda-like Cuda program.
+Adds two GPU vectors into one new GPU vector.
+"vectorAdd" function is the only part that needs to be modified to execute any 
+function that takes two input vectors and returns one output vector.
+For clarity, no error checking is used.
 */
 
 #include <stdio.h>
