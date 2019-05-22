@@ -1,7 +1,13 @@
-/*vector add with no error checking*/
+/* 
+Simples Possible Cuda-like Cuda Program 
+Vector Add 
+For clarity, no error checking is added
+*/
+
 #include <stdio.h>
 #include <cuda_runtime.h>
 #include <helper_cuda.h>
+
 __global__ void vectorAdd(const float *A, const float *B, float *C, int numElements)
 {
 	int i = blockDim.x * blockIdx.x + threadIdx.x;
@@ -17,7 +23,7 @@ int main(void)
 	printf("[Vector addition of %d elements]\n", numElements);
 	float *h_A = (float *)malloc(size);     // Allocate the host input vector A
 	float *h_B = (float *)malloc(size);     // Allocate the host input vector B
-	float *h_C = (float *)malloc(size);		// Allocate the host output vector C
+	float *h_C = (float *)malloc(size);     // Allocate the host output vector C
 	for (int i = 0; i < numElements; ++i) /* Initialize the host input vectors*/ {
 		h_A[i] = rand() / (float)RAND_MAX;
 		h_B[i] = rand() / (float)RAND_MAX;
