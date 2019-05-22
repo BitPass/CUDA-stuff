@@ -1,4 +1,4 @@
-/*vector add with no error*/
+/*vector add with no error checking*/
 #include <stdio.h>
 #include <cuda_runtime.h>
 #include <helper_cuda.h>
